@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <h1>Healthy Food</h1>
+      <h1 className="kg-heading">Healthy Food</h1>
 
       {/* 1. ternary operators:
       {healthyFoods.length === 0 ? <h3>The list is empty </h3> : null}
