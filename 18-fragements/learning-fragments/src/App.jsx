@@ -19,8 +19,9 @@
     */
 
 import "./App.css";
-import EmptyMessage from "../../components/EmptyMessage";
-import HealthyFoods from "../../components/HealthyFoods";
+import Container from "./components/Container";
+import EmptyMessage from "./components/EmptyMessage";
+import HealthyFoods from "./components/HealthyFoods";
 
 function App() {
   const foodItems = ["Roti", "Dal", "Rice", "Green Vegetable", "Milk", "Ghee"];
@@ -36,17 +37,25 @@ function App() {
 
   return (
     <>
-      <h1 className="kg-heading">Healthy Food</h1>
+      <Container>
+        <h1 className="kg-heading">Healthy Food</h1>
 
-      {/* 1. ternary operators:
+        {/* 1. ternary operators:
       {healthyFoods.length === 0 ? <h3>The list is empty </h3> : null}
        */}
 
-      {/*
+        {/*
       create your own attribute and assign the object. Once assigned, that attribute is saved in react props and can be called as props.<attributeName>
       */}
-      <EmptyMessage foodItems={foodItems}></EmptyMessage>
-      <HealthyFoods foodItems={foodItems}></HealthyFoods>
+        <EmptyMessage foodItems={foodItems}></EmptyMessage>
+        <HealthyFoods foodItems={foodItems}></HealthyFoods>
+      </Container>
+      <Container>
+        <p>
+          Above is the list of healthy food that are good for your health and
+          well being.
+        </p>
+      </Container>
     </>
   );
 }
