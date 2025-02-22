@@ -21,6 +21,7 @@
 import "./App.css";
 import Container from "./components/Container";
 import EmptyMessage from "./components/EmptyMessage";
+import CustomItem from "./components/CustomItem";
 import HealthyFoods from "./components/HealthyFoods";
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
       create your own attribute and assign the object. Once assigned, that attribute is saved in react props and can be called as props.<attributeName>
       */}
         <EmptyMessage foodItems={foodItems}></EmptyMessage>
+        <CustomItem></CustomItem>
         <HealthyFoods foodItems={foodItems}></HealthyFoods>
       </Container>
       {/* <Container>
