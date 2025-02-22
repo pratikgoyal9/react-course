@@ -50,12 +50,12 @@ function App() {
         <EmptyMessage foodItems={foodItems}></EmptyMessage>
         <HealthyFoods foodItems={foodItems}></HealthyFoods>
       </Container>
-      <Container>
+      {/* <Container>
         <p>
           Above is the list of healthy food that are good for your health and
           well being.
         </p>
-      </Container>
+      </Container> */}
     </>
   );
 }
