@@ -1,10 +1,6 @@
 import css from "./CustomItem.module.css";
 
-function CustomItem() {
-  const onChangeEventHandler = (event) => {
-    console.log(event.target.value);
-  };
-
+function CustomItem({ onChangeEventHandler }) {
   return (
     <>
       <div>

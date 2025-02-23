@@ -27,12 +27,16 @@ import HealthyFoods from "./components/HealthyFoods";
 function App() {
   const foodItems = ["Roti", "Dal", "Rice", "Green Vegetable", "Milk", "Ghee"];
 
+  const onChangeEventHandler = (event) => {
+    console.log(event.target.value);
+  };
+
   // const foodItems = [];
 
   /* 
 1. if-else:
 
-  if (healthyFoods.length === 0) {
+  if (healthyFoods.length === 0) {b
     return <h3>The list is empty</h3>;
   } */
 
@@ -49,7 +53,7 @@ function App() {
       create your own attribute and assign the object. Once assigned, that attribute is saved in react props and can be called as props.<attributeName>
       */}
         <EmptyMessage foodItems={foodItems}></EmptyMessage>
-        <CustomItem></CustomItem>
+        <CustomItem onChangeEventHandler={onChangeEventHandler}></CustomItem>
         <HealthyFoods foodItems={foodItems}></HealthyFoods>
       </Container>
       {/* <Container>

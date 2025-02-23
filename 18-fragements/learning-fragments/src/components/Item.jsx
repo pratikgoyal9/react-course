@@ -9,22 +9,18 @@ CSS module:
 */
 import css from "./Item.module.css";
 
-const Item = ({ foodItem }) => {
-  const buttonClickHandler = (event, foodItem) => {
-    /* SyntheticBaseEvent {_reactName: 'onClick', _targetInst: null, type: 'click', nativeEvent: PointerEvent, target: button._button_wald7_10, …} */
+const Item = ({ foodItem, onClickHandler }) => {
+  /*   const buttonClickHandler = (event, foodItem) => {
+    SyntheticBaseEvent {_reactName: 'onClick', _targetInst: null, type: 'click', nativeEvent: PointerEvent, target: button._button_wald7_10, …}
     console.log(event);
 
-    /* `foodItem` was bought */
     console.log(`${foodItem} was bought`);
-  };
+  }; */
   return (
     <>
       <li className={`list-group-item ${css["kg-item"]}`}>
         <span className={css.KgSpan}>{foodItem}</span>
-        <button
-          className={css.button}
-          onClick={(event) => buttonClickHandler(event, foodItem)}
-        >
+        <button className={css.button} onClick={onClickHandler}>
           Buy
         </button>
       </li>
