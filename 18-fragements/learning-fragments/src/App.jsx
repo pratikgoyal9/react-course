@@ -23,12 +23,21 @@ import Container from "./components/Container";
 import EmptyMessage from "./components/EmptyMessage";
 import CustomItem from "./components/CustomItem";
 import HealthyFoods from "./components/HealthyFoods";
+import { useState } from "react";
 
 function App() {
   const foodItems = ["Roti", "Dal", "Rice", "Green Vegetable", "Milk", "Ghee"];
 
+  let [textToShow, setTextToShow] = useState("Entered food item"); // useState is an array that returns an initial value and set function.
+
+  // Another long way to define useState
+  /*   let textStateArr = useState("Entered food item"); // will be set as the initial value of textStateArr[0]
+  let textStateArr = useState();   // will be set as undefined of textStateArr[0]
+  let textToShow = textStateArr[0];
+  let setTextToShow = textStateArr[1]; */
+
   const onChangeEventHandler = (event) => {
-    console.log(event.target.value);
+    setTextToShow(event.target.value);
   };
 
   // const foodItems = [];
@@ -54,6 +63,7 @@ function App() {
       */}
         <EmptyMessage foodItems={foodItems}></EmptyMessage>
         <CustomItem onChangeEventHandler={onChangeEventHandler}></CustomItem>
+        <p>{textToShow}</p>
         <HealthyFoods foodItems={foodItems}></HealthyFoods>
       </Container>
       {/* <Container>
