@@ -28,7 +28,7 @@ import { useState } from "react";
 function App() {
   const foodItems = ["Roti", "Dal", "Rice", "Green Vegetable", "Milk", "Ghee"];
 
-  let [textToShow, setTextToShow] = useState("Entered food item"); // useState is an array that returns an initial value and set function.
+  let [textToShow, setTextToShow] = useState(); // useState is an array that returns an initial value and set function.
 
   // Another long way to define useState
   /*   let textStateArr = useState("Entered food item"); // will be set as the initial value of textStateArr[0]
@@ -36,7 +36,7 @@ function App() {
   let textToShow = textStateArr[0];
   let setTextToShow = textStateArr[1]; */
 
-  const onChangeEventHandler = (event) => {
+  const onChangeEvent = (event) => {
     setTextToShow(event.target.value);
   };
 
@@ -62,7 +62,7 @@ function App() {
       create your own attribute and assign the object. Once assigned, that attribute is saved in react props and can be called as props.<attributeName>
       */}
         <EmptyMessage foodItems={foodItems}></EmptyMessage>
-        <CustomItem onChangeEventHandler={onChangeEventHandler}></CustomItem>
+        <CustomItem onChangeEventHandler={onChangeEvent}></CustomItem>
         <p>{textToShow}</p>
         <HealthyFoods foodItems={foodItems}></HealthyFoods>
       </Container>
