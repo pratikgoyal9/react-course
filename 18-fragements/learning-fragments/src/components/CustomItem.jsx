@@ -1,6 +1,6 @@
 import css from "./CustomItem.module.css";
 
-function CustomItem({ onChangeEventHandler }) {
+function CustomItem({ onKeyDownHandler }) {
   return (
     <>
       <div>
@@ -8,7 +8,7 @@ function CustomItem({ onChangeEventHandler }) {
           className={css.foodItem}
           type="text"
           placeholder="enter good item"
-          onChange={onChangeEventHandler}
+          onKeyDown={onKeyDownHandler}
         ></input>
       </div>
     </>
