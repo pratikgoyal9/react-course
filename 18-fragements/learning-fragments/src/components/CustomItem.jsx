@@ -7,7 +7,7 @@ function CustomItem({ onKeyDownHandler }) {
         <input
           className={css.foodItem}
           type="text"
-          placeholder="enter good item"
+          placeholder="type food & press enter"
           onKeyDown={onKeyDownHandler}
         ></input>
       </div>

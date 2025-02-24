@@ -26,14 +26,7 @@ import HealthyFoods from "./components/HealthyFoods";
 import { useState } from "react";
 
 function App() {
-  let [foodItems, setFoodItems] = useState([
-    "Roti",
-    "Dal",
-    "Rice",
-    "Green Vegetable",
-    "Milk",
-    "Ghee",
-  ]);
+  let [foodItems, setFoodItems] = useState([]);
 
   let [textToShow, setTextToShow] = useState(); // useState is an array that returns an initial value and set function.
 
@@ -73,9 +66,8 @@ function App() {
         {/*
       create your own attribute and assign the object. Once assigned, that attribute is saved in react props and can be called as props.<attributeName>
       */}
-        <EmptyMessage foodItems={foodItems}></EmptyMessage>
         <CustomItem onKeyDownHandler={onKeyDown}></CustomItem>
-        <p>{textToShow}</p>
+        <EmptyMessage foodItems={foodItems}></EmptyMessage>
         <HealthyFoods foodItems={foodItems}></HealthyFoods>
       </Container>
       {/* <Container>
